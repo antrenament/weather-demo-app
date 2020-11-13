@@ -22,7 +22,7 @@ const InputLocation = ({ setLocations, locations }) => {
       placeholder={"Type your favorite location. Use city name or postal code"}
       variant={"outlined"}
       fullWidth
-      InputLabelProps={{ color: 'salmon', focused: true}}
+      InputLabelProps={{focused: true}}
       InputProps={{
         endAdornment: <InputAdornment position={"end"}>
           <IconButton onClick={() => updateLocations(input)}>
