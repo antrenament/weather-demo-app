@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import InputLocation from "./InputLocation/InputLocation";
+import WeatherCard from "./WeatherCard/WeatherCard";
 
 const App = () => {
   const [locations, setLocations] = useState([])
@@ -13,7 +14,7 @@ const App = () => {
       />
       {
         locations.length > 0 && locations.map((location, index) =>
-          <p key={index}> {location} </p>
+          <WeatherCard location={location} key={index}/>
         )
       }
     </>
