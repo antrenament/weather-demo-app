@@ -1,16 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import TextField from '@material-ui/core/TextField'
 import {InputAdornment} from "@material-ui/core";
 import AddIcon from '@material-ui/icons/Add';
 import IconButton from "@material-ui/core/IconButton";
 
 const InputLocation = () => {
+  const [input, setInput] = useState('')
+  const handleInput = (e) => setInput(e.target.value)
+
+  const keyPress = (e) => {
+    if(e.keyCode == 13){
+      alert(input)
+    }
+  }
+
   return (
     <TextField
+      onChange={handleInput}
+      onKeyDown={keyPress}
       placeholder={"Type your favorite location. Use city name or postal code"}
-      multiline
       variant={"outlined"}
-      rowsMax={2}
       fullWidth
       InputLabelProps={{ color: 'salmon', focused: true}}
       InputProps={{
