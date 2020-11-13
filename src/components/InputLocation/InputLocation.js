@@ -4,13 +4,14 @@ import {InputAdornment} from "@material-ui/core";
 import AddIcon from '@material-ui/icons/Add';
 import IconButton from "@material-ui/core/IconButton";
 
-const InputLocation = () => {
+const InputLocation = ({ setLocations, locations }) => {
   const [input, setInput] = useState('')
   const handleInput = (e) => setInput(e.target.value)
+  const updateLocations = input => setLocations([...locations, input])
 
   const keyPress = (e) => {
     if(e.keyCode == 13){
-      alert(input)
+      updateLocations(input)
     }
   }
 
@@ -24,7 +25,7 @@ const InputLocation = () => {
       InputLabelProps={{ color: 'salmon', focused: true}}
       InputProps={{
         endAdornment: <InputAdornment position={"end"}>
-          <IconButton>
+          <IconButton onClick={() => updateLocations(input)}>
             <AddIcon />
           </IconButton>
         </InputAdornment>
