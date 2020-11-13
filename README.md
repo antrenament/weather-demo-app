@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# weather-demo-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App].
+
+We will use the free [WEATHER API](www.weatherapi.com) to get both the weather and current time.\
+As a user you will need to provide one of the following : US Zipcode, UK Postcode, Canada Postalcode, IP address, Latitude/Longitude (decimal degree) or city name
 
 ## Available Scripts
 
